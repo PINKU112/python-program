@@ -190,5 +190,234 @@ GIT :-
 
 
 
+tuple in python :-
+
+- tuple is a bulid in data type that lets us create imutable (the value cannot be changeable) sequence of values.
+- ex.tup = (87,67,98,34,45)
+- tup[0] -> 87
+- tup[1] -> 67
+- we can do the tuple as 
+1. tup1 = () -> empty tuple 
+2. tup2 = (1,) -> a tuple 
+3. tup3 = (34,67,89,20) -> tuple
+- tuple has also satisfy the sliceing property.
+
+tuple methods :-
+
+- tup.index(element) -> return index of first occurrence  (it returns the element is placed which index number)
+- tup.count(element) -> return the count total occurrence (count the 1 which are present in the tuple)
+
+ex. tup = (2,1,3,1)
+tup.index(1) -> 1
+tup.count(1) -> 2 
+
+dictionary in python :-
+
+- dictionary are used to store the data values in key:value pair.
+- they are unordered,mutble(changeable) & donot allow duplicate keys.
+- ex.
+dict = {
+   "name" : "pinku",
+   "cgpa" : 8.1,
+   "marks" : [88,86,85],
+}
+- the left part of the dictionary are the keys and right side part in their values so dictionary contains key : value pair structure.
+
+
+nested dictionary in python :-
+ - dictionary also satisfy the nested proerty.
+ - dictionary under dictionary is called nested dictionary.
+ - ex.
+ student = {
+   "name" : "mithun",
+   "score":{
+      "chem" : 98,
+      "math" : 87,
+      "phy" : 79
+   }
+ }
+
+
+ dictionary methods :-
+
+ 1. myDict.keys() - it returns all keys.
+ 2. myDict.values() - it return aal values.
+ 3. myDict.items() - it will retirn all key : value pair as tuple.
+ 4. myDict.get("key") - return the key according the values.
+ 5. myDict.update(newDict) - insert the specified items to the dictionary.
+
+
+ set in python :-
+
+ - set is the collection of unordered items.
+ - each element in the set must be unique and immutable(cannot be change )
+- ex.
+nums = {1,2,3,4,5}
+set2 = {5,8,9,4}
+  
+set methods :-
+
+1. set.add(element) -> add an element.
+2. set.remove(element) -> remove an elemnt.
+3. set.clear() -> clear all elemnts.
+4. set.pop() -> remove a random value of set.
+5. set.union(set2) -> combine both set values and return a new set.
+6.set.intersection(set2) -> combine the common values and return a new set.
+
+
+ex.
+
+set1 = {1,2,3,2,4}
+set2 = {3,7,2,6,4}
+set1.union(set2) -> {1,2,3,4,6,7}
+set1.intersection(set2) -> {2,3,4}
+
+
+loops in python :-
+
+
+- loops are used to repeate instruction.
+- in python there are 2 loops - while loop , for loop
+1. while loop :-
+syntax - 
+intialization
+while condition:
+   statement
+   increment/decrement.
+
+
+Break & Continue :-
+
+  - break: break is used to terminate the loop when encountered.
+  - continue: terminates execution in the current iteration & continue execution of the loop with the next iteration.  
+
+
+2. for loop :-
+
+- for loop are used for sequential traversal. for traversing list, string, tuple etc..
+- syntax :-
+   for val in list:
+    statements...
+
+
+range() :-
+- range function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default),and stops before a specified number.
+- syntax -> range(start, stop, step)
+
+
+function in python :-
+- function is a block of statements that performs a specific task.
+- syntax :-
+def func_name(parameter 1 ,parameter2...)
+some statement
+returns val
+
+func_name(arg1,arg2..) #function call
+
+
+
+- function are of 2 types in python
+1. built-in function - print(), len(), type(), range()...etc
+2. user defined function - user can devlope the function.
+
+
+Object oriented programming in python:-->
+
+--To map with real world scenarios,we started using objects in code.  
+--This is called object oriented programming(OOP).
+
+1st concept:--> Procedural programming.
+2nd concept:--> Functional programming.
+3rd concept:--> Object oriented programming.
+
+Class and Object in python:-->
+
+--Class is a blueprint for creating objects.
+ex:-->Creating a class .
+class Student:
+   name = "web bocket"
+
+ex:-->creating a object(instance)
+s1 = student()
+print(s1.name)  #web bocket
+
+___init___ Function(constructor):-->
+
+--All class have a function called _init_(), which is always when the class is being initialised.
+
+ex:--> creatinig a class 
+class Student:
+   def_init_(self,fullname)
+     self.name=fullname
+
+ex:-->creating a object
+s1=Student("web bocket")
+print(s1.name)
+
+Note:-->The self parmeter is a referene to the current instance of the class and is used to access variable that belongs to the class.
+
+
+Class and instance Attributes:-->
+
+university --> college1,college2,college3,college4
+               student1,student2,student3,student4
+
+--colleges and students are the attributes of university.
+
+
+Methods in python:-->
+--Methods are function that belongs to objects.
+
+ex:-->creating class
+class Student:
+  def_init_(self,fullname)
+     self.name = fullname
+  def hello(self):
+     print("hello",self.name)
+
+ex:-->creating object
+s1 = Student("rohan")
+s1.hello()
+
+Abstraction :-
+- hiding the implimentation details of a class and showing the essential fatures of the user.
+
+Encapsulation :-
+- wrapping data and a function into a single unit(object).
+
+
+Private(like) Attributes & Methods :-
+- private attributes & methods are ment to be used within the class and are not accessible from outside the class.
+- the private class attributes are written in __(attributes) so that we call it private attributes of a class. 
+
+Inheritance :-
+- when one class derives some property and methods of another class .
+- syntax :-
+class car:
+    ---------
+class toyotacar(car):
+    ---------
+- in python inheritance are of 3 typs 
+1. single inheeritance
+2. multi-level inheritance
+3. multiple inheritance   
+
+Polymorphism : operator overloading :-
+
+- when the same operator is allowed to have different meaning accordingly to the context.
+- In that polymorphism we can use dunder functions.
+1. a + b -> __add__
+2. a - b -> __sub__
+3. a * b -> __mul__
+4. a / b -> __truediv__
+5. a % b -> __mod__
+  
+ex - (+)
+print(1 + 2) #3 (addition)
+print("web" + "bocket") #web bocket (concatination)
+print([1,2,3] + [4,5,6]) #[1,2,3,4,5,6] (merged) 
+
+
+
 
 

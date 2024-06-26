@@ -58,7 +58,7 @@ print(marks[1:4])
 print(marks[:3]) 
 print(marks[2:])
 
-# example of list method.
+#example of list method.
 
 list = [2,1,3]
 list.append(5)
